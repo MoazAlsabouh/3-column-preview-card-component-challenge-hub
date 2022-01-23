@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  /* font-family: 'Big Shoulders Display', cursive; */
+  /* font-family: 'Lexend Deca', sans-serif; */
+}
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --paragraphs: hsla(0, 0%, 100%, 0.75);
+  --background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+.contenar {
+  background: #f2f2f2;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenar .column {
+  width: 305px;
+  height: 500px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.contenar .column.orang {
+  background: var(--bright-orange)
+}
+
+.contenar .column.cyan {
+  background: var(--dark-cyan)
+}
+
+.contenar .column.dark-cyan {
+  background: var(--very-dark-cyan)
+}
+
+.contenar .column .image {
+  padding: 40px;
+}
+
+.contenar .column .text {
+  padding: 0 40px;
+  color: var(--paragraphs);
+}
+
+.contenar .column .text h1 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: bold;
+  font-size: 36px;
+  margin: 20px 0;
+}
+
+.contenar .column .text p {
+  font-family: 'Lexend Deca', sans-serif;
+  margin: 40px 0;
+  font-size: 17px;
+}
+
+.contenar .column .but .more {
+  border: none;
+  background: var(--background-headings-buttons);
+  margin: 40px;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 18px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.contenar .column .but .more.orang {
+  color: var(--bright-orange)
+}
+
+.contenar .column .but .more.cyan {
+  color: var(--dark-cyan)
+}
+
+.contenar .column .but .more.dark-cyan {
+  color: var(--very-dark-cyan)
+}
+
+.contenar .column .but .more:hover {
+  color: var(--background-headings-buttons);
+  border: 5px solid var(--background-headings-buttons);
+  background: transparent;
+}
+
+.contenar .column .but .more:active {
+  color: red;
+  border: 10px solid red;
+}
+
+@media (max-width: 767px) {
+  .contenar {
+    flex-direction: column;
+    height: 220vh;
+    justify-content: flex-start;
+  }
+  .contenar .column:first-child {
+    margin: 50px 0 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .contenar .column:not(:first-child) {
+    border-radius: 0;
+  }
+  .contenar .column:last-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
